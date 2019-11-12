@@ -18,13 +18,17 @@ function sorting(arrNumber) {
 
 function getTotal(arrNumber) {
   // code di sini
-  var counter = 0;
-  for (var i = 0; i < arrNumber.length; i++) {
-    if (arrNumber[0] === arrNumber[i]) {
-      counter++;
+  if (arrNumber.length === 0) {
+    return "";
+  } else {
+    var counter = 0;
+    for (var i = 0; i < arrNumber.length; i++) {
+      if (arrNumber[0] === arrNumber[i]) {
+        counter++;
+      }
     }
+    return `angka paling besar adalah ${arrNumber[0]} dan jumlah kemunculan sebanyak ${counter} kali`;
   }
-  return `angka paling besar adalah ${arrNumber[0]} dan jumlah kemunculan sebanyak ${counter} kali`;
 }
 // console.log(getTotal([8, 8, 8, 8, 4, 3, 2]));
 
